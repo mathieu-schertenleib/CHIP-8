@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mathieu/code/CHIP-8/src/interpreter.cpp
+interpreter.hpp
+/home/mathieu/code/CHIP-8/src/interpreter.hpp
+
+/home/mathieu/code/CHIP-8/src/interpreter.hpp
+
+/home/mathieu/code/CHIP-8/src/main.cpp
+interpreter.hpp
+/home/mathieu/code/CHIP-8/src/interpreter.hpp
+
