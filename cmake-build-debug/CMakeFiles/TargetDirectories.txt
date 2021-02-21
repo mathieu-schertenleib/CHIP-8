@@ -1,4 +1,0 @@
-/home/mathieu/code/CHIP-8/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mathieu/code/CHIP-8/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/mathieu/code/CHIP-8/cmake-build-debug/CMakeFiles/tests.dir
-/home/mathieu/code/CHIP-8/cmake-build-debug/CMakeFiles/CHIP-8.dir
