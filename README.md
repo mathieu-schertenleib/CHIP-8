@@ -10,7 +10,7 @@ Hex | Mnemonic | Description
 00E0 | CLS | Clear the display.
 00EE | RET | Return from subroutine.
 1nnn | JP addr | Jump to location nnn.
-2nnn | CALL addr | Call subroutine at nnn.
+2nnn | CALL addr | Call subroutine at location nnn.
 3xkk | SE Vx, byte | Skip next instruction if Vx = kk.
 4xkk | SNE Vx, byte | Skip next instruction if Vx != kk.
 5xy0 | SE Vx, Vy | Skip next instruction if Vx = Vy.
@@ -22,9 +22,9 @@ Hex | Mnemonic | Description
 8xy3 | XOR Vx, Vy | Set Vx = Vx XOR Vy.
 8xy4 | ADD Vx, Vy | Set Vx = Vx + Vy, set VF = carry.
 8xy5 | SUB Vx, Vy | Set Vx = Vx - Vy, set VF = NOT borrow.
-8xy6 | SHR Vx {, Vy} | Set VF = LSB(Vx), Vx = Vx SHR 1.
+8xy6 | SHR Vx | Set VF = LSB(Vx), Vx = Vx SHR 1.
 8xy7 | SUBN Vx, Vy | Set Vx = Vy - Vx, set VF = NOT borrow.
-8xyE | SHL Vx {, Vy} | Set VF = MSB(Vx), Vx = Vx SHL 1.
+8xyE | SHL Vx | Set VF = MSB(Vx), Vx = Vx SHL 1.
 9xy0 | SNE Vx, Vy | Skip next instruction if Vx != Vy.
 Annn | LD I, addr | Set I = nnn.
 Bnnn | JP V0, addr | Jump to location nnn + V0.

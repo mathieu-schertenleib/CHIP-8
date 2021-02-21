@@ -18,7 +18,7 @@ set(WARNINGS
 
 
 add_executable(CHIP-8 src/main.cpp src/interpreter.cpp src/interpreter.hpp)
-target_compile_options(CHIP-8 PUBLIC ${WARNINGS})
+target_compile_options(CHIP-8 PUBLIC ${WARNINGS} -fconcepts)
 
 
 add_executable(tests tests/main.cpp)
