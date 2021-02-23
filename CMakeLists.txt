@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 
 project(CHIP-8)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED On)
 
 set(WARNINGS
@@ -18,9 +18,17 @@ set(WARNINGS
 
 
 add_executable(CHIP-8 src/main.cpp src/interpreter.cpp src/interpreter.hpp)
-target_compile_options(CHIP-8 PUBLIC ${WARNINGS} -fconcepts)
 
+if (MSVC)
+    target_compile_options(CHIP-8 PUBLIC /Wall)
+else ()
+    target_compile_options(CHIP-8 PUBLIC ${WARNINGS})
+endif ()
 
 add_executable(tests tests/main.cpp)
-target_compile_options(tests PUBLIC ${WARNINGS})
+if (MSVC)
+    target_compile_options(CHIP-8 PUBLIC /W3 /wd5045)
+else ()
+    target_compile_options(CHIP-8 PUBLIC ${WARNINGS})
+endif ()
 target_include_directories(tests PUBLIC src)
